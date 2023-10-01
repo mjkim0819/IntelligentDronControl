@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\IntelligentRobotControl",
+    "\\IntelligentRobotControl\\TelloDCP1_0",
     "\\IntelligentRobotControl\\TelloTest"
   ],
-  "SelectedNode": "\\IntelligentRobotControl",
+  "SelectedNode": "\\IntelligentRobotControl\\TelloDCP1_0\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
