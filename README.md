@@ -1,4 +1,4 @@
-# IntelligentRobotControl
+# IntelligentDronControl
 
 <div align="center">
 <h2>[2023] 드론 비행 제어 🎮</h2>
