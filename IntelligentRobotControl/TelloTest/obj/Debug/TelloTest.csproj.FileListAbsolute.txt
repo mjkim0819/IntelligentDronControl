@@ -1,0 +1,11 @@
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\bin\Debug\TelloTest.exe.config
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\bin\Debug\TelloTest.exe
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\bin\Debug\TelloTest.pdb
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.csproj.AssemblyReference.cache
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.FrmServer.resources
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.Properties.Resources.resources
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.csproj.GenerateResource.cache
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.csproj.CoreCompileInputs.cache
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.exe
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.pdb
+C:\Users\lbhmj\Desktop\DronControl\git\IntelligentRobotControl\TelloTest\obj\Debug\TelloTest.FrmClient.resources
