@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2157D1D3-314E-40F2-A37B-B24C3C3967D3}</ProjectGuid>
+    <ProjectGuid>{97049645-0A5A-48D0-8987-850DF1A524CA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TelloDCP1_0</RootNamespace>
-    <AssemblyName>TelloDCP1_0</AssemblyName>
+    <RootNamespace>TelloDCP2_0</RootNamespace>
+    <AssemblyName>TelloDCP2_0</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCam.Designer.cs">
+      <DependentUpon>FrmCam.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDCP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCam.resx">
+      <DependentUpon>FrmCam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDCP.resx">
       <DependentUpon>FrmDCP.cs</DependentUpon>
     </EmbeddedResource>
@@ -65,7 +74,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
