@@ -103,5 +103,27 @@ namespace TelloDCP2_0
             }
             catch (Exception ex) { };
         }
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tbEdit.Text = "";
+        }
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog od = new OpenFileDialog();
+            od.Filter = "Text File(*.txt)|*.txt|모든파일 (*.*)|*.*";
+            od.Title = "Open a Text File";
+            od.ShowDialog();
+            if (od.FileName != "")
+                tbEdit.Text = File.ReadAllText(od.FileName);
+        }
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sd = new SaveFileDialog();
+            sd.Filter = "Text File(*.txt)|*.txt|모든파일 (*.*)|*.*";
+            sd.Title = "Save a Text File";
+            sd.ShowDialog();
+            if (sd.FileName != "")
+                File.WriteAllText(sd.FileName, tbEdit.Text);
+        }
     }
 }
