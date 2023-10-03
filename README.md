@@ -21,7 +21,7 @@
   - combobox 및 send 버튼
     - command, takeoff, land 명령어를 combox를 활용해서 제어 가능
   - 드론 조작 버튼 panel
-    - takeoff, land 버튼
+    - takeoff(이륙), land(착륙) 버튼
     - 드론의 높이, 위치 조정하는 버튼 (추후 구현)
     - 패턴비행, 비상착륙 (추후 구현)
   - Status list box
