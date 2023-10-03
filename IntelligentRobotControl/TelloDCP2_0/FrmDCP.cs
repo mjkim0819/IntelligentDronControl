@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -90,6 +91,17 @@ namespace TelloDCP2_0
             wCam = new FrmCam(this);
             wCam.Show();
             wCam.Location = new Point(this.Right, this.Top);
+        }
+        private void FrmDCP_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            tBusy = false;
+            try
+            {
+                tUDPServer.Abort();
+                udpSvr.Close();
+                udpCli.Close();
+            }
+            catch (Exception ex) { };
         }
     }
 }

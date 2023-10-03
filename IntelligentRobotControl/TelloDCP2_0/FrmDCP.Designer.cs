@@ -29,8 +29,12 @@ namespace TelloDCP2_0
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnSend = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbCommand = new System.Windows.Forms.ComboBox();
+            this.btnCam = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lbStatus = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnEmc = new System.Windows.Forms.Button();
@@ -46,48 +50,108 @@ namespace TelloDCP2_0
             this.btnLand = new System.Windows.Forms.Button();
             this.btnTakeoff = new System.Windows.Forms.Button();
             this.lbComm = new System.Windows.Forms.ListBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCam = new System.Windows.Forms.Button();
-            this.cbCommand = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnSend = new System.Windows.Forms.Button();
+            this.lbStatus = new System.Windows.Forms.ListBox();
+            this.lbCode = new System.Windows.Forms.ListBox();
+            this.tbEdit = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flightPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stepRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnSend
+            // 
+            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSend.Location = new System.Drawing.Point(304, 3);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(101, 25);
+            this.btnSend.TabIndex = 2;
+            this.btnSend.Text = "send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(406, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(300, 25);
+            this.textBox1.TabIndex = 1;
+            // 
+            // cbCommand
+            // 
+            this.cbCommand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbCommand.FormattingEnabled = true;
+            this.cbCommand.Items.AddRange(new object[] {
+            "command",
+            "takeoff",
+            "land"});
+            this.cbCommand.Location = new System.Drawing.Point(3, 4);
+            this.cbCommand.Name = "cbCommand";
+            this.cbCommand.Size = new System.Drawing.Size(300, 23);
+            this.cbCommand.TabIndex = 3;
+            this.cbCommand.Text = "command";
+            // 
+            // btnCam
+            // 
+            this.btnCam.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCam.Location = new System.Drawing.Point(707, 0);
+            this.btnCam.Name = "btnCam";
+            this.btnCam.Size = new System.Drawing.Size(95, 30);
+            this.btnCam.TabIndex = 5;
+            this.btnCam.Text = "TelloCam";
+            this.btnCam.UseVisualStyleBackColor = true;
+            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnCam);
+            this.panel2.Controls.Add(this.cbCommand);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnSend);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 472);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(802, 30);
+            this.panel2.TabIndex = 27;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.lbStatus);
+            this.panel4.Controls.Add(this.lbCode);
+            this.panel4.Controls.Add(this.tbEdit);
+            this.panel4.Controls.Add(this.menuStrip1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(519, 472);
+            this.panel4.Size = new System.Drawing.Size(802, 472);
             this.panel4.TabIndex = 29;
-            // 
-            // lbStatus
-            // 
-            this.lbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbStatus.FormattingEnabled = true;
-            this.lbStatus.IntegralHeight = false;
-            this.lbStatus.ItemHeight = 15;
-            this.lbStatus.Location = new System.Drawing.Point(-3, 0);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(522, 472);
-            this.lbStatus.TabIndex = 20;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lbComm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(519, 0);
+            this.panel1.Location = new System.Drawing.Point(518, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 472);
-            this.panel1.TabIndex = 28;
+            this.panel1.Size = new System.Drawing.Size(284, 444);
+            this.panel1.TabIndex = 35;
             // 
             // panel3
             // 
@@ -104,9 +168,9 @@ namespace TelloDCP2_0
             this.panel3.Controls.Add(this.brnUp);
             this.panel3.Controls.Add(this.btnLand);
             this.panel3.Controls.Add(this.btnTakeoff);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(281, 224);
+            this.panel3.Size = new System.Drawing.Size(278, 219);
             this.panel3.TabIndex = 23;
             // 
             // btnEmc
@@ -207,7 +271,6 @@ namespace TelloDCP2_0
             this.btnLand.TabIndex = 5;
             this.btnLand.Text = "착륙";
             this.btnLand.UseVisualStyleBackColor = true;
-            this.btnLand.Click += new System.EventHandler(this.btnLand_Click);
             // 
             // btnTakeoff
             // 
@@ -217,7 +280,6 @@ namespace TelloDCP2_0
             this.btnTakeoff.TabIndex = 4;
             this.btnTakeoff.Text = "이륙";
             this.btnTakeoff.UseVisualStyleBackColor = true;
-            this.btnTakeoff.Click += new System.EventHandler(this.btnTakeoff_Click);
             // 
             // lbComm
             // 
@@ -226,67 +288,141 @@ namespace TelloDCP2_0
             this.lbComm.FormattingEnabled = true;
             this.lbComm.IntegralHeight = false;
             this.lbComm.ItemHeight = 15;
-            this.lbComm.Location = new System.Drawing.Point(0, 222);
+            this.lbComm.Location = new System.Drawing.Point(1, 222);
             this.lbComm.Name = "lbComm";
-            this.lbComm.Size = new System.Drawing.Size(283, 250);
+            this.lbComm.Size = new System.Drawing.Size(283, 222);
             this.lbComm.TabIndex = 22;
             // 
-            // panel2
+            // lbStatus
             // 
-            this.panel2.Controls.Add(this.btnCam);
-            this.panel2.Controls.Add(this.cbCommand);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.btnSend);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 472);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(802, 30);
-            this.panel2.TabIndex = 27;
+            this.lbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbStatus.FormattingEnabled = true;
+            this.lbStatus.IntegralHeight = false;
+            this.lbStatus.ItemHeight = 15;
+            this.lbStatus.Location = new System.Drawing.Point(225, 28);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(577, 444);
+            this.lbStatus.TabIndex = 31;
             // 
-            // btnCam
+            // lbCode
             // 
-            this.btnCam.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCam.Location = new System.Drawing.Point(707, 0);
-            this.btnCam.Name = "btnCam";
-            this.btnCam.Size = new System.Drawing.Size(95, 30);
-            this.btnCam.TabIndex = 5;
-            this.btnCam.Text = "TelloCam";
-            this.btnCam.UseVisualStyleBackColor = true;
-            this.btnCam.Click += new System.EventHandler(this.btnCam_Click);
+            this.lbCode.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbCode.FormattingEnabled = true;
+            this.lbCode.IntegralHeight = false;
+            this.lbCode.ItemHeight = 15;
+            this.lbCode.Location = new System.Drawing.Point(105, 28);
+            this.lbCode.Name = "lbCode";
+            this.lbCode.Size = new System.Drawing.Size(120, 444);
+            this.lbCode.TabIndex = 33;
             // 
-            // cbCommand
+            // tbEdit
             // 
-            this.cbCommand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbCommand.FormattingEnabled = true;
-            this.cbCommand.Items.AddRange(new object[] {
-            "command",
-            "takeoff",
-            "land"});
-            this.cbCommand.Location = new System.Drawing.Point(3, 4);
-            this.cbCommand.Name = "cbCommand";
-            this.cbCommand.Size = new System.Drawing.Size(300, 23);
-            this.cbCommand.TabIndex = 3;
-            this.cbCommand.Text = "command";
+            this.tbEdit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbEdit.Location = new System.Drawing.Point(0, 28);
+            this.tbEdit.Multiline = true;
+            this.tbEdit.Name = "tbEdit";
+            this.tbEdit.Size = new System.Drawing.Size(105, 444);
+            this.tbEdit.TabIndex = 32;
             // 
-            // textBox1
+            // menuStrip1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(406, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 25);
-            this.textBox1.TabIndex = 1;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.controlToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(802, 28);
+            this.menuStrip1.TabIndex = 34;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnSend
+            // fileToolStripMenuItem
             // 
-            this.btnSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSend.Location = new System.Drawing.Point(304, 3);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(101, 25);
-            this.btnSend.TabIndex = 2;
-            this.btnSend.Text = "send";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.flightPlanToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.newToolStripMenuItem.Text = "New";
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            // 
+            // flightPlanToolStripMenuItem
+            // 
+            this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.flightPlanToolStripMenuItem.Text = "Flight Plan";
+            // 
+            // controlToolStripMenuItem
+            // 
+            this.controlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectToolStripMenuItem,
+            this.loadToolStripMenuItem,
+            this.stepRunToolStripMenuItem,
+            this.autoRunToolStripMenuItem});
+            this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.controlToolStripMenuItem.Text = "Control";
+            // 
+            // connectToolStripMenuItem
+            // 
+            this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.connectToolStripMenuItem.Text = "Connect";
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.loadToolStripMenuItem.Text = "Load";
+            // 
+            // stepRunToolStripMenuItem
+            // 
+            this.stepRunToolStripMenuItem.Name = "stepRunToolStripMenuItem";
+            this.stepRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.stepRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.stepRunToolStripMenuItem.Text = "Step Run";
+            // 
+            // autoRunToolStripMenuItem
+            // 
+            this.autoRunToolStripMenuItem.Name = "autoRunToolStripMenuItem";
+            this.autoRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
+            this.autoRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.autoRunToolStripMenuItem.Text = "Auto Run";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
+            this.aboutToolStripMenuItem.Text = "About Dcp";
             // 
             // FrmDCP
             // 
@@ -294,24 +430,30 @@ namespace TelloDCP2_0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 502);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "FrmDCP";
             this.Text = "TelloDCP 2.0";
             this.Load += new System.EventHandler(this.FrmDCP_Load);
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbCommand;
+        private System.Windows.Forms.Button btnCam;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ListBox lbStatus;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnEmc;
@@ -327,11 +469,22 @@ namespace TelloDCP2_0
         private System.Windows.Forms.Button btnLand;
         private System.Windows.Forms.Button btnTakeoff;
         private System.Windows.Forms.ListBox lbComm;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox cbCommand;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnCam;
+        private System.Windows.Forms.ListBox lbStatus;
+        private System.Windows.Forms.ListBox lbCode;
+        private System.Windows.Forms.TextBox tbEdit;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem flightPlanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stepRunToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoRunToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
