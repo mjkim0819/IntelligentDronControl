@@ -135,6 +135,7 @@ namespace TelloDCP3_0
             this.Controls.Add(this.panel1);
             this.Name = "FrmFp";
             this.Text = "FrmFp";
+            this.Load += new System.EventHandler(this.FrmFp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).EndInit();

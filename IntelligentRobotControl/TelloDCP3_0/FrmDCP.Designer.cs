@@ -37,6 +37,7 @@ namespace TelloDCP3_0
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEmc = new System.Windows.Forms.Button();
             this.btnPtfly = new System.Windows.Forms.Button();
             this.btnDownarrow = new System.Windows.Forms.Button();
             this.btnLeftarrow = new System.Windows.Forms.Button();
@@ -65,7 +66,6 @@ namespace TelloDCP3_0
             this.autoRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnEmc = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -173,6 +173,15 @@ namespace TelloDCP3_0
             this.panel3.Size = new System.Drawing.Size(278, 219);
             this.panel3.TabIndex = 23;
             // 
+            // btnEmc
+            // 
+            this.btnEmc.Location = new System.Drawing.Point(156, 177);
+            this.btnEmc.Name = "btnEmc";
+            this.btnEmc.Size = new System.Drawing.Size(115, 34);
+            this.btnEmc.TabIndex = 16;
+            this.btnEmc.Text = "비상착륙";
+            this.btnEmc.UseVisualStyleBackColor = true;
+            // 
             // btnPtfly
             // 
             this.btnPtfly.Location = new System.Drawing.Point(11, 177);
@@ -181,6 +190,7 @@ namespace TelloDCP3_0
             this.btnPtfly.TabIndex = 14;
             this.btnPtfly.Text = "패턴비행";
             this.btnPtfly.UseVisualStyleBackColor = true;
+            this.btnPtfly.Click += new System.EventHandler(this.btnPtfly_Click);
             // 
             // btnDownarrow
             // 
@@ -364,8 +374,9 @@ namespace TelloDCP3_0
             // flightPlanToolStripMenuItem
             // 
             this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
-            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.flightPlanToolStripMenuItem.Text = "Flight Plan";
+            this.flightPlanToolStripMenuItem.Click += new System.EventHandler(this.flightPlanToolStripMenuItem_Click);
             // 
             // controlToolStripMenuItem
             // 
@@ -417,15 +428,6 @@ namespace TelloDCP3_0
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.aboutToolStripMenuItem.Text = "About Dcp";
-            // 
-            // btnEmc
-            // 
-            this.btnEmc.Location = new System.Drawing.Point(156, 177);
-            this.btnEmc.Name = "btnEmc";
-            this.btnEmc.Size = new System.Drawing.Size(115, 34);
-            this.btnEmc.TabIndex = 16;
-            this.btnEmc.Text = "비상착륙";
-            this.btnEmc.UseVisualStyleBackColor = true;
             // 
             // FrmDCP
             // 

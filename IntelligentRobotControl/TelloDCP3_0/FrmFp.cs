@@ -12,9 +12,15 @@ namespace TelloDCP3_0
 {
     public partial class FrmFp : Form
     {
-        public FrmFp()
+        FrmDCP pWin;
+        public FrmFp(FrmDCP par)
         {
             InitializeComponent();
+        }
+
+        private void FrmFp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

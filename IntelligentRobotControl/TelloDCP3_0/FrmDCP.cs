@@ -19,6 +19,7 @@ namespace TelloDCP3_0
         static FrmDCP frmCli;
         static UdpClient udpCli, udpSvr;
         static FrmCam wCam;
+        static FrmFp wRoom;
         static Thread tUDPServer;
         public bool tBusy;
 
@@ -116,6 +117,21 @@ namespace TelloDCP3_0
             if (od.FileName != "")
                 tbEdit.Text = File.ReadAllText(od.FileName);
         }
+
+        private void btnPtfly_Click(object sender, EventArgs e)
+        {
+            wRoom = new FrmFp(this);
+            wRoom.Show();
+            wRoom.Location = new Point(this.Left + 150, this.Top);
+        }
+
+        private void flightPlanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            wRoom = new FrmFp(this);
+            wRoom.Show();
+            wRoom.Location = new Point(this.Left + 150, this.Top);
+        }
+
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sd = new SaveFileDialog();
