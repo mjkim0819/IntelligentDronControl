@@ -97,6 +97,8 @@ namespace TelloDCP3_0
         }
         private void FrmDCP_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (wCam != null)
+                wCam.Close();
             tBusy = false;
             try
             {

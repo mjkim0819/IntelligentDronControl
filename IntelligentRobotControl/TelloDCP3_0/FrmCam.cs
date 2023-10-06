@@ -26,7 +26,12 @@ namespace TelloDCP3_0
             pWin = par;
             udpSvr = new UdpClient(11111);
         }
-
+        private void FrmDCP_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            btnStop.PerformClick();
+            if (udpSvr != null)
+                udpSvr.Close();
+        }
         private void FrmCam_Load(object sender, EventArgs e)
         {
             tWin = this;
@@ -57,14 +62,14 @@ namespace TelloDCP3_0
         {
             tStarted = false;
             pWin.udpcommand("streamoff");
-            btnStop.Enabled = false;
-            btnStart.Enabled = true;
             try
             {
                 udpSvr.Close();
                 tCam.Abort();
             }
             catch (Exception ex) { };
+            btnStop.Enabled = false;
+            btnStart.Enabled = true;
         }
     }
 }
