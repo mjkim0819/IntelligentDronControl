@@ -38,10 +38,12 @@ namespace TelloDCP3_0
             this.tbAlt = new System.Windows.Forms.TrackBar();
             this.btnCoding = new System.Windows.Forms.Button();
             this.pbRoom = new System.Windows.Forms.PictureBox();
+            this.pbDrone = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAlt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDrone)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,7 +125,7 @@ namespace TelloDCP3_0
             // 
             // pbRoom
             // 
-            this.pbRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbRoom.BackColor = System.Drawing.Color.White;
             this.pbRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbRoom.BackgroundImage")));
             this.pbRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -135,11 +137,24 @@ namespace TelloDCP3_0
             this.pbRoom.TabIndex = 10;
             this.pbRoom.TabStop = false;
             // 
+            // pbDrone
+            // 
+            this.pbDrone.BackColor = System.Drawing.Color.Transparent;
+            this.pbDrone.Image = ((System.Drawing.Image)(resources.GetObject("pbDrone.Image")));
+            this.pbDrone.Location = new System.Drawing.Point(76, 115);
+            this.pbDrone.Margin = new System.Windows.Forms.Padding(2);
+            this.pbDrone.Name = "pbDrone";
+            this.pbDrone.Size = new System.Drawing.Size(48, 44);
+            this.pbDrone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbDrone.TabIndex = 8;
+            this.pbDrone.TabStop = false;
+            // 
             // FrmFp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 453);
+            this.Controls.Add(this.pbDrone);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbRoom);
             this.Name = "FrmFp";
@@ -150,6 +165,7 @@ namespace TelloDCP3_0
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAlt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDrone)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -164,5 +180,6 @@ namespace TelloDCP3_0
         private System.Windows.Forms.TrackBar tbAlt;
         private System.Windows.Forms.Button btnCoding;
         private System.Windows.Forms.PictureBox pbRoom;
+        private System.Windows.Forms.PictureBox pbDrone;
     }
 }
