@@ -29,6 +29,7 @@ namespace TelloDCP3_0
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFp));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbGrid = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,10 +38,12 @@ namespace TelloDCP3_0
             this.tbAlt = new System.Windows.Forms.TrackBar();
             this.btnCoding = new System.Windows.Forms.Button();
             this.pbRoom = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAlt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -126,21 +129,36 @@ namespace TelloDCP3_0
             this.pbRoom.TabIndex = 8;
             this.pbRoom.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(495, 453);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmFp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 453);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbRoom);
             this.Controls.Add(this.panel1);
             this.Name = "FrmFp";
             this.Text = "FrmFp";
-            this.Load += new System.EventHandler(this.FrmFp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAlt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -155,5 +173,6 @@ namespace TelloDCP3_0
         private System.Windows.Forms.TrackBar tbAlt;
         private System.Windows.Forms.Button btnCoding;
         private System.Windows.Forms.PictureBox pbRoom;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

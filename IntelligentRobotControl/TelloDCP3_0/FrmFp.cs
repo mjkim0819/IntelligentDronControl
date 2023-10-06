@@ -17,10 +17,5 @@ namespace TelloDCP3_0
         {
             InitializeComponent();
         }
-
-        private void FrmFp_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

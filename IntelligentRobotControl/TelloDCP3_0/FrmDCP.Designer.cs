@@ -37,7 +37,7 @@ namespace TelloDCP3_0
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnEmc = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.btnPtfly = new System.Windows.Forms.Button();
             this.btnDownarrow = new System.Windows.Forms.Button();
             this.btnLeftarrow = new System.Windows.Forms.Button();
@@ -156,7 +156,7 @@ namespace TelloDCP3_0
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.btnEmc);
+            this.panel3.Controls.Add(this.btnStop);
             this.panel3.Controls.Add(this.btnPtfly);
             this.panel3.Controls.Add(this.btnDownarrow);
             this.panel3.Controls.Add(this.btnLeftarrow);
@@ -173,14 +173,14 @@ namespace TelloDCP3_0
             this.panel3.Size = new System.Drawing.Size(278, 219);
             this.panel3.TabIndex = 23;
             // 
-            // btnEmc
+            // btnStop
             // 
-            this.btnEmc.Location = new System.Drawing.Point(156, 177);
-            this.btnEmc.Name = "btnEmc";
-            this.btnEmc.Size = new System.Drawing.Size(115, 34);
-            this.btnEmc.TabIndex = 16;
-            this.btnEmc.Text = "비상착륙";
-            this.btnEmc.UseVisualStyleBackColor = true;
+            this.btnStop.Location = new System.Drawing.Point(156, 177);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(115, 34);
+            this.btnStop.TabIndex = 16;
+            this.btnStop.Text = "비상착륙";
+            this.btnStop.UseVisualStyleBackColor = true;
             // 
             // btnPtfly
             // 
@@ -374,7 +374,7 @@ namespace TelloDCP3_0
             // flightPlanToolStripMenuItem
             // 
             this.flightPlanToolStripMenuItem.Name = "flightPlanToolStripMenuItem";
-            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.flightPlanToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.flightPlanToolStripMenuItem.Text = "Flight Plan";
             this.flightPlanToolStripMenuItem.Click += new System.EventHandler(this.flightPlanToolStripMenuItem_Click);
             // 
@@ -392,28 +392,31 @@ namespace TelloDCP3_0
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.connectToolStripMenuItem.Text = "Connect";
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // stepRunToolStripMenuItem
             // 
             this.stepRunToolStripMenuItem.Name = "stepRunToolStripMenuItem";
             this.stepRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.stepRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.stepRunToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.stepRunToolStripMenuItem.Text = "Step Run";
+            this.stepRunToolStripMenuItem.Click += new System.EventHandler(this.stepRunToolStripMenuItem_Click);
             // 
             // autoRunToolStripMenuItem
             // 
             this.autoRunToolStripMenuItem.Name = "autoRunToolStripMenuItem";
             this.autoRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.autoRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
+            this.autoRunToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.autoRunToolStripMenuItem.Text = "Auto Run";
+            this.autoRunToolStripMenuItem.Click += new System.EventHandler(this.autoRunToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -489,7 +492,7 @@ namespace TelloDCP3_0
         private System.Windows.Forms.ToolStripMenuItem autoRunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button btnEmc;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 

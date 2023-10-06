@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,7 @@ namespace TelloDCP3_0
         static FrmFp wRoom;
         static Thread tUDPServer;
         public bool tBusy;
+        private bool abortRun;
 
         public FrmDCP()
         {
@@ -130,6 +132,66 @@ namespace TelloDCP3_0
             wRoom = new FrmFp(this);
             wRoom.Show();
             wRoom.Location = new Point(this.Left + 150, this.Top);
+        }
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbCode.Items.Clear();
+            for (int i = 0; i < tbEdit.Lines.Length; i++)
+            {
+                if (Parsing(tbEdit.Lines[i]) >= 0)
+                    lbCode.Items.Add(tbEdit.Lines[i]);
+            }
+        }
+
+        public string[] mCMD = { "TakeOff", "Land", "Move", "Rotate", "Shift", "UpDown" };
+
+        private int Parsing(string cLine)
+        {
+            for (int i = 0; i < mCMD.Length; i++)
+            {
+                if (Regex.IsMatch(cLine, "``b" + mCMD[i] + "``b"))
+                    return i;
+            }
+            return -1;
+        }
+
+        private void autoRunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lbCode.Items.Count <= 0)
+                return;
+            abortRun = false;
+            btnStop.Enabled = true;
+            for (int line = 0; line < lbCode.Items.Count; line++)
+            {
+                lbCode.SelectedIndex = line;
+                //ExeCmd(1stCmd.SelectItem.ToString());
+                sleep50ms(5);
+                if (abortRun) break;
+            }
+            btnStop.Enabled = false;
+            lbCode.SelectedIndex = 0;
+        }
+
+        private void sleep50ms(int ms50)
+        {
+            for (int i = 0; i < ms50; i++)
+            {
+                Thread.Sleep(50);
+                Application.DoEvents();
+                if (abortRun)
+                    break;
+            }
+        }
+
+        private void stepRunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lbCode.Items.Count <= 0)
+                return;
+            //ExecCmd(lbCode.SelectedItem.ToString();
+            if (lbCode.SelectedIndex == lbCode.Items.Count - 1)
+                lbCode.SelectedIndex = 0;
+            else
+                lbCode.SelectedIndex++;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
