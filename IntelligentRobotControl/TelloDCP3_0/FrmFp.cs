@@ -88,15 +88,5 @@ namespace TelloDCP3_0
             p.Y = (int)(p.Y * scale);
             return p;
         }
-
-        private void tbGrid_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbRoom_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
     }
 }
