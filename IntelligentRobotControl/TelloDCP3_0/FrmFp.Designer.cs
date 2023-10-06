@@ -62,11 +62,16 @@ namespace TelloDCP3_0
             // 
             // tbGrid
             // 
+            this.tbGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbGrid.Location = new System.Drawing.Point(36, 54);
             this.tbGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbGrid.Maximum = 100;
+            this.tbGrid.Minimum = 1;
             this.tbGrid.Name = "tbGrid";
             this.tbGrid.Size = new System.Drawing.Size(119, 56);
             this.tbGrid.TabIndex = 3;
+            this.tbGrid.Value = 50;
+            this.tbGrid.Scroll += new System.EventHandler(this.tbGrid_Scroll);
             // 
             // label1
             // 
@@ -152,7 +157,7 @@ namespace TelloDCP3_0
             this.Controls.Add(this.pbRoom);
             this.Controls.Add(this.panel1);
             this.Name = "FrmFp";
-            this.Text = "FrmFp";
+            this.Text = "Flight Plan";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).EndInit();
