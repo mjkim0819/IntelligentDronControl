@@ -18,6 +18,11 @@ namespace TelloDCP3_0
             InitializeComponent();
             pWin = par;
         }
+        private void FrmFp_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(pWin.Location.X + 180, pWin.Location.Y + 65);
+            drawGrid();
+        }
         public struct WPoint
         {
             public Point p;
@@ -87,6 +92,11 @@ namespace TelloDCP3_0
             p.X = (int)(p.X * scale);
             p.Y = (int)(p.Y * scale);
             return p;
+        }
+
+        private void tbGrid_Scroll(object sender, EventArgs e)
+        {
+            drawGrid();
         }
     }
 }

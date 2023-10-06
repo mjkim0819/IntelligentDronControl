@@ -69,6 +69,7 @@ namespace TelloDCP3_0
             this.tbGrid.Size = new System.Drawing.Size(119, 56);
             this.tbGrid.TabIndex = 3;
             this.tbGrid.Value = 50;
+            this.tbGrid.Scroll += new System.EventHandler(this.tbGrid_Scroll);
             // 
             // label1
             // 
