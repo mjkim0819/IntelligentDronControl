@@ -33,8 +33,8 @@ namespace TelloDCP3_0
         private void drawGrid()
         {
             int x, y;
-            int w = pbRoom.Size.Width; // pbRoom 사이즈에 맞게 그리드 사이즈 +a
-            int h = pbRoom.Size.Width;
+            int w = pbRoom.BackgroundImage.Size.Width;
+            int h = pbRoom.BackgroundImage.Size.Height;
             int inc = tbGrid.Value;
 
             Pen myPen = new Pen(Color.GreenYellow);
