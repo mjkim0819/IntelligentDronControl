@@ -141,7 +141,7 @@ namespace TelloDCP3_0
             // 
             this.pbDrone.BackColor = System.Drawing.Color.Transparent;
             this.pbDrone.Image = ((System.Drawing.Image)(resources.GetObject("pbDrone.Image")));
-            this.pbDrone.Location = new System.Drawing.Point(76, 115);
+            this.pbDrone.Location = new System.Drawing.Point(96, 115);
             this.pbDrone.Margin = new System.Windows.Forms.Padding(2);
             this.pbDrone.Name = "pbDrone";
             this.pbDrone.Size = new System.Drawing.Size(48, 44);

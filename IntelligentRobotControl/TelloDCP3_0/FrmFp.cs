@@ -21,6 +21,7 @@ namespace TelloDCP3_0
         private void FrmFp_Load(object sender, EventArgs e)
         {
             this.Location = new Point(pWin.Location.X + 180, pWin.Location.Y + 65);
+            pbRoom.Controls.Add(pbDrone);
             drawGrid();
         }
         public struct WPoint
