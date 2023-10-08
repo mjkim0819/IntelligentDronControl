@@ -91,6 +91,7 @@ namespace TelloDCP3_0
             this.btnSimulate.TabIndex = 1;
             this.btnSimulate.Text = "Simulate";
             this.btnSimulate.UseVisualStyleBackColor = true;
+            this.btnSimulate.Click += new System.EventHandler(this.btnSimulate_Click);
             // 
             // btnClear
             // 
@@ -101,6 +102,7 @@ namespace TelloDCP3_0
             this.btnClear.TabIndex = 0;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // tbAlt
             // 
