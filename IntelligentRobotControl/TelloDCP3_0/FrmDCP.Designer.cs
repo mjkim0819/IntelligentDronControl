@@ -492,7 +492,7 @@ namespace TelloDCP3_0
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.TextBox tbEdit;
+        public System.Windows.Forms.TextBox tbEdit;
     }
 }
 
