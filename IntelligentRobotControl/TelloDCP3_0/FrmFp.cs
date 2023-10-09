@@ -35,9 +35,11 @@ namespace TelloDCP3_0
         private void drawGrid()
         {
             int x, y;
-            int w = this.Size.Width;
-            int h = this.Size.Height;
+            int w = pbRoom.BackgroundImage.Size.Width;
+            int h = pbRoom.BackgroundImage.Size.Height;
             int inc = tbGrid.Value;
+            //int w = this.Size.Width;
+            //int h = this.Size.Height;
 
             Pen myPen = new Pen(Color.GreenYellow);
             Bitmap bmp = new Bitmap(pbRoom.BackgroundImage);
@@ -70,10 +72,12 @@ namespace TelloDCP3_0
                 tbAlt.Value = mPoint[i].Alt;
                 myPen.Width = 5;
                 gr.DrawEllipse(myPen, p.X - rr / 2, p.Y - rr / 2, rr, rr);
+                gr.DrawString(tbAlt.Value.ToString(), new Font("Arial", 10),
+                    new SolidBrush(Color.Red), p.X, p.Y - 20);
                 myPen.Width = 1;
                 if (i > 0)
                 {
-                    //p = trimPoint(mPoint[i].p);
+                    p = trimPoint(mPoint[i].p);
                     _p = trimPoint(mPoint[i - 1].p);
                     gr.DrawLine(myPen, p, _p);
                     x = p.X - _p.X;
@@ -164,6 +168,16 @@ namespace TelloDCP3_0
             gr.DrawImage(img, new PointF(0, 0));
 
             return rbmp;
+        }
+
+        private void pbRoom_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (wIndex < 50)
+                ++wIndex;
+            mPoint[wIndex].p = e.Location;
+            mPoint[wIndex].Alt = tbAlt.Value;
+
+            drawPath(wIndex);
         }
     }
 }

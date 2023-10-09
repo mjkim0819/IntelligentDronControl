@@ -138,6 +138,7 @@ namespace TelloDCP3_0
             this.pbRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRoom.TabIndex = 10;
             this.pbRoom.TabStop = false;
+            this.pbRoom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbRoom_MouseClick);
             // 
             // pbDrone
             // 

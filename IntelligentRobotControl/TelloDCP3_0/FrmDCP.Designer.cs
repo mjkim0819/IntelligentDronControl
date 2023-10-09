@@ -347,7 +347,7 @@ namespace TelloDCP3_0
             this.saveToolStripMenuItem,
             this.flightPlanToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -386,19 +386,19 @@ namespace TelloDCP3_0
             this.stepRunToolStripMenuItem,
             this.autoRunToolStripMenuItem});
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
             this.controlToolStripMenuItem.Text = "Control";
             // 
             // connectToolStripMenuItem
             // 
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.connectToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.connectToolStripMenuItem.Text = "Connect";
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -406,7 +406,7 @@ namespace TelloDCP3_0
             // 
             this.stepRunToolStripMenuItem.Name = "stepRunToolStripMenuItem";
             this.stepRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
-            this.stepRunToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.stepRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.stepRunToolStripMenuItem.Text = "Step Run";
             this.stepRunToolStripMenuItem.Click += new System.EventHandler(this.stepRunToolStripMenuItem_Click);
             // 
@@ -414,7 +414,7 @@ namespace TelloDCP3_0
             // 
             this.autoRunToolStripMenuItem.Name = "autoRunToolStripMenuItem";
             this.autoRunToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.autoRunToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.autoRunToolStripMenuItem.Size = new System.Drawing.Size(205, 26);
             this.autoRunToolStripMenuItem.Text = "Auto Run";
             this.autoRunToolStripMenuItem.Click += new System.EventHandler(this.autoRunToolStripMenuItem_Click);
             // 
@@ -423,7 +423,7 @@ namespace TelloDCP3_0
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
