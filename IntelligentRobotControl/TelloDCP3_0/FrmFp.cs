@@ -13,17 +13,17 @@ namespace TelloDCP3_0
 {
     public partial class FrmFp : Form
     {
-        private void FrmFp_Load(object sender, EventArgs e)
-        {
-            this.Location = new Point(pWin.Location.X + 180, pWin.Location.Y + 65);
-            pbRoom.Controls.Add(pbDrone);
-            drawGrid();
-        }
         FrmDCP pWin;
         public FrmFp(FrmDCP par)
         {
             InitializeComponent();
             pWin = par;
+        }
+        private void FrmFp_Load(object sender, EventArgs e)
+        {
+            this.Location = new Point(pWin.Location.X + 180, pWin.Location.Y + 65);
+            pbRoom.Controls.Add(pbDrone);
+            drawGrid();
         }
         public struct WPoint
         {
@@ -178,6 +178,39 @@ namespace TelloDCP3_0
             mPoint[wIndex].Alt = tbAlt.Value;
 
             drawPath(wIndex);
+        }
+
+        private void btnCoding_Click(object sender, EventArgs e)
+        {
+            int alt = 80, deg = 0;
+            double x, y, p, th;
+
+            pWin.tbEdit.Clear();
+            pWin.tbEdit.AppendText(pWin.mCmd[0] + "\r\n");
+            for (int i = 0; i < wIndex; i++)
+            {
+                if (mPoint[i].Alt != alt)
+                {
+                    alt = mPoint[i].Alt - alt;
+                    pWin.tbEdit.AppendText(pWin.mCmd[5] + " " + alt.ToString("d") + "\r\n");
+                    alt = mPoint[i].Alt;
+                }
+
+                deg = deg - mPoint[i].Deg;
+                if (deg < -180) deg += 360;
+                if (deg > 180) deg -= 360;
+
+                if (deg != 0)
+                    pWin.tbEdit.AppendText(pWin.mCmd[3] + " " + deg.ToString("d") + "\r\n");
+                deg = mPoint[i].Deg;
+                th = deg * Math.PI / 180;
+                x = mPoint[i + 1].p.X - mPoint[i].p.X;
+                y = mPoint[i + 1].p.Y - mPoint[i].p.Y;
+                p = Math.Sqrt(x * x + y * y);
+                pWin.tbEdit.AppendText(pWin.mCmd[2] + " " + p.ToString("f0") + "\r\n");
+
+            }
+            pWin.tbEdit.AppendText(pWin.mCmd[1] + "\r\n");
         }
     }
 }

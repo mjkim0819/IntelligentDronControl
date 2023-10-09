@@ -55,7 +55,7 @@ namespace TelloDCP3_0
             this.panel1.Controls.Add(this.tbAlt);
             this.panel1.Controls.Add(this.btnCoding);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(495, 0);
+            this.panel1.Location = new System.Drawing.Point(271, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 453);
             this.panel1.TabIndex = 9;
@@ -124,17 +124,18 @@ namespace TelloDCP3_0
             this.btnCoding.TabIndex = 2;
             this.btnCoding.Text = "Coding";
             this.btnCoding.UseVisualStyleBackColor = true;
+            this.btnCoding.Click += new System.EventHandler(this.btnCoding_Click);
             // 
             // pbRoom
             // 
             this.pbRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbRoom.BackColor = System.Drawing.Color.White;
             this.pbRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbRoom.BackgroundImage")));
-            this.pbRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbRoom.Location = new System.Drawing.Point(0, 0);
+            this.pbRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbRoom.Location = new System.Drawing.Point(1, 0);
             this.pbRoom.Margin = new System.Windows.Forms.Padding(4);
             this.pbRoom.Name = "pbRoom";
-            this.pbRoom.Size = new System.Drawing.Size(495, 453);
+            this.pbRoom.Size = new System.Drawing.Size(270, 453);
             this.pbRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRoom.TabIndex = 10;
             this.pbRoom.TabStop = false;
@@ -143,8 +144,9 @@ namespace TelloDCP3_0
             // pbDrone
             // 
             this.pbDrone.BackColor = System.Drawing.Color.Transparent;
+            this.pbDrone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbDrone.Image = ((System.Drawing.Image)(resources.GetObject("pbDrone.Image")));
-            this.pbDrone.Location = new System.Drawing.Point(96, 115);
+            this.pbDrone.Location = new System.Drawing.Point(40, 66);
             this.pbDrone.Margin = new System.Windows.Forms.Padding(2);
             this.pbDrone.Name = "pbDrone";
             this.pbDrone.Size = new System.Drawing.Size(48, 44);
@@ -156,7 +158,7 @@ namespace TelloDCP3_0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 453);
+            this.ClientSize = new System.Drawing.Size(458, 453);
             this.Controls.Add(this.pbDrone);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbRoom);

@@ -145,13 +145,13 @@ namespace TelloDCP3_0
             }
         }
 
-        public string[] mCMD = { "TakeOff", "Land", "Move", "Rotate", "Shift", "UpDown" };
+        public string[] mCmd = { "TakeOff", "Land", "Move", "Rotate", "Shift", "UpDown" };
 
         private int Parsing(string cLine)
         {
-            for (int i = 0; i < mCMD.Length; i++)
+            for (int i = 0; i < mCmd.Length; i++)
             {
-                if (Regex.IsMatch(cLine, "``b" + mCMD[i] + "``b"))
+                if (Regex.IsMatch(cLine, "``b" + mCmd[i] + "``b"))
                     return i;
             }
             return -1;

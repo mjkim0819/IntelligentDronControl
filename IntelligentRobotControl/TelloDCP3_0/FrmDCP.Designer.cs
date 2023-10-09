@@ -148,9 +148,9 @@ namespace TelloDCP3_0
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.lbComm);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(518, 30);
+            this.panel1.Location = new System.Drawing.Point(518, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 393);
+            this.panel1.Size = new System.Drawing.Size(284, 395);
             this.panel1.TabIndex = 35;
             // 
             // panel3
@@ -291,7 +291,7 @@ namespace TelloDCP3_0
             this.lbComm.ItemHeight = 15;
             this.lbComm.Location = new System.Drawing.Point(1, 222);
             this.lbComm.Name = "lbComm";
-            this.lbComm.Size = new System.Drawing.Size(283, 171);
+            this.lbComm.Size = new System.Drawing.Size(283, 173);
             this.lbComm.TabIndex = 22;
             // 
             // lbStatus
@@ -300,10 +300,10 @@ namespace TelloDCP3_0
             this.lbStatus.FormattingEnabled = true;
             this.lbStatus.IntegralHeight = false;
             this.lbStatus.ItemHeight = 15;
-            this.lbStatus.Location = new System.Drawing.Point(225, 30);
+            this.lbStatus.Location = new System.Drawing.Point(225, 28);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(577, 393);
+            this.lbStatus.Size = new System.Drawing.Size(577, 395);
             this.lbStatus.TabIndex = 31;
             // 
             // lbCode
@@ -312,18 +312,18 @@ namespace TelloDCP3_0
             this.lbCode.FormattingEnabled = true;
             this.lbCode.IntegralHeight = false;
             this.lbCode.ItemHeight = 15;
-            this.lbCode.Location = new System.Drawing.Point(105, 30);
+            this.lbCode.Location = new System.Drawing.Point(105, 28);
             this.lbCode.Name = "lbCode";
-            this.lbCode.Size = new System.Drawing.Size(120, 393);
+            this.lbCode.Size = new System.Drawing.Size(120, 395);
             this.lbCode.TabIndex = 33;
             // 
             // tbEdit
             // 
             this.tbEdit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbEdit.Location = new System.Drawing.Point(0, 30);
+            this.tbEdit.Location = new System.Drawing.Point(0, 28);
             this.tbEdit.Multiline = true;
             this.tbEdit.Name = "tbEdit";
-            this.tbEdit.Size = new System.Drawing.Size(105, 393);
+            this.tbEdit.Size = new System.Drawing.Size(105, 395);
             this.tbEdit.TabIndex = 32;
             // 
             // menuStrip1
@@ -335,7 +335,7 @@ namespace TelloDCP3_0
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(802, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(802, 28);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -347,7 +347,7 @@ namespace TelloDCP3_0
             this.saveToolStripMenuItem,
             this.flightPlanToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newToolStripMenuItem
@@ -386,7 +386,7 @@ namespace TelloDCP3_0
             this.stepRunToolStripMenuItem,
             this.autoRunToolStripMenuItem});
             this.controlToolStripMenuItem.Name = "controlToolStripMenuItem";
-            this.controlToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
+            this.controlToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.controlToolStripMenuItem.Text = "Control";
             // 
             // connectToolStripMenuItem
@@ -423,7 +423,7 @@ namespace TelloDCP3_0
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
@@ -478,7 +478,6 @@ namespace TelloDCP3_0
         private System.Windows.Forms.ListBox lbComm;
         private System.Windows.Forms.ListBox lbStatus;
         private System.Windows.Forms.ListBox lbCode;
-        private System.Windows.Forms.TextBox tbEdit;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -493,6 +492,7 @@ namespace TelloDCP3_0
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.TextBox tbEdit;
     }
 }
 
