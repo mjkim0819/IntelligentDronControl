@@ -14,14 +14,14 @@ namespace TelloDCP3_0
     public partial class FrmFp : Form
     {
         FrmDCP pWin;
-        public FrmFp(FrmDCP par)
+        public FrmFp(FrmDCP parent)
         {
             InitializeComponent();
-            pWin = par;
+            pWin = parent;
         }
-        private void FrmFp_Load(object sender, EventArgs e)
+        private void Frm_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(pWin.Location.X + 180, pWin.Location.Y + 65);
+            rRatio = (double)pbRoom.BackgroundImage.Width / pbRoom.BackgroundImage.Height;
             pbRoom.Controls.Add(pbDrone);
             drawGrid();
         }
@@ -32,6 +32,7 @@ namespace TelloDCP3_0
         }
         WPoint[] mPoint = new WPoint[50];
         int wIndex = -1;
+        double rRatio = 1;
         private void drawGrid()
         {
             int x, y;
@@ -85,11 +86,11 @@ namespace TelloDCP3_0
                     deg = Math.Atan2(y, x) * 180 / Math.PI;
                     mPoint[wIndex - 1].Deg = Convert.ToInt32(deg);
                 }
+                gr.Dispose();
+                pbRoom.Image = bmp;
+                pbRoom.Invalidate();
             }
 
-            gr.Dispose();
-            pbRoom.Image = bmp;
-            pbRoom.Invalidate();
         }
 
         private Point trimPoint(Point p)
@@ -136,7 +137,7 @@ namespace TelloDCP3_0
                 pbRoom.Refresh();
 
                 Thread.Sleep(500);
-                th = deg + Math.PI / 180;
+                th = deg * Math.PI / 180;
                 xx = mPoint[i + 1].p.X - mPoint[i].p.X;
                 yy = mPoint[i + 1].p.Y - mPoint[i].p.Y;
                 dp = Math.Sqrt(xx * xx + yy * yy);
@@ -212,5 +213,6 @@ namespace TelloDCP3_0
             }
             pWin.tbEdit.AppendText(pWin.mCmd[1] + "\r\n");
         }
+
     }
 }
