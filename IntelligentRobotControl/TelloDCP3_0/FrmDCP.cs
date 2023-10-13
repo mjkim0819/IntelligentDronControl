@@ -198,11 +198,6 @@ namespace TelloDCP3_0
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnStop_Click_1(object sender, EventArgs e)
-        {
             abortRun = true;
         }
 

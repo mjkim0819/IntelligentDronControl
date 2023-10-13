@@ -433,7 +433,7 @@ namespace TelloDCP3_0
             this.btnStop.TabIndex = 16;
             this.btnStop.Text = "비상착륙";
             this.btnStop.UseVisualStyleBackColor = false;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click_1);
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // FrmDCP
             // 
