@@ -196,6 +196,16 @@ namespace TelloDCP3_0
                 lbCode.SelectedIndex++;
         }
 
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStop_Click_1(object sender, EventArgs e)
+        {
+            abortRun = true;
+        }
+
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sd = new SaveFileDialog();

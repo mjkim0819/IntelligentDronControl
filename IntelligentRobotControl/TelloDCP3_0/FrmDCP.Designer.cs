@@ -37,7 +37,6 @@ namespace TelloDCP3_0
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnStop = new System.Windows.Forms.Button();
             this.btnPtfly = new System.Windows.Forms.Button();
             this.btnDownarrow = new System.Windows.Forms.Button();
             this.btnLeftarrow = new System.Windows.Forms.Button();
@@ -66,6 +65,7 @@ namespace TelloDCP3_0
             this.autoRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnStop = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -172,15 +172,6 @@ namespace TelloDCP3_0
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(278, 219);
             this.panel3.TabIndex = 23;
-            // 
-            // btnStop
-            // 
-            this.btnStop.Location = new System.Drawing.Point(156, 177);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(115, 34);
-            this.btnStop.TabIndex = 16;
-            this.btnStop.Text = "비상착륙";
-            this.btnStop.UseVisualStyleBackColor = true;
             // 
             // btnPtfly
             // 
@@ -432,6 +423,18 @@ namespace TelloDCP3_0
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.aboutToolStripMenuItem.Text = "About Dcp";
             // 
+            // btnStop
+            // 
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnStop.Location = new System.Drawing.Point(156, 176);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(115, 34);
+            this.btnStop.TabIndex = 16;
+            this.btnStop.Text = "비상착륙";
+            this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click_1);
+            // 
             // FrmDCP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -491,8 +494,8 @@ namespace TelloDCP3_0
         private System.Windows.Forms.ToolStripMenuItem autoRunToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Button btnStop;
         public System.Windows.Forms.TextBox tbEdit;
+        private System.Windows.Forms.Button btnStop;
     }
 }
 
