@@ -78,7 +78,7 @@ namespace TelloDCP3_0
                 myPen.Width = 1;
                 if (i > 0)
                 {
-                    p = trimPoint(mPoint[i].p);
+                    //  p = trimPoint(mPoint[i].p);
                     _p = trimPoint(mPoint[i - 1].p);
                     gr.DrawLine(myPen, p, _p);
                     x = p.X - _p.X;

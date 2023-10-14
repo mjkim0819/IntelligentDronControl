@@ -24,6 +24,8 @@ namespace TelloDCP3_0
         static Thread tUDPServer;
         public bool tBusy;
         private bool abortRun;
+        public long T_time;
+        StreamWriter swLog;
 
         public FrmDCP()
         {
@@ -199,6 +201,28 @@ namespace TelloDCP3_0
         private void btnStop_Click(object sender, EventArgs e)
         {
             abortRun = true;
+        }
+
+        private void cbLog_CheckedChanged(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+                + @"\DcpData";
+
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            path += string.Format(@"\Tello{0}.txt", DateTime.Now.Ticks);
+
+            if (cbLog.Checked)
+            {
+                swLog = File.CreateText(path);
+                swLog.WriteLine("%{0}: time, bat, yaw, h, tof, baro", DateTime.Now);
+                swLog.Flush();
+                T_time = DateTime.Now.Ticks;
+            }
+            else
+            {
+                swLog.Close();
+            }
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
