@@ -50,6 +50,12 @@ namespace TelloDCP3_0
             lbStatus.Items.Add("Sever disconnected.");
             udpSvr.Close();
         }
+
+        internal void udpcommand(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void ReceiveCallback(IAsyncResult ar)
         {
             UdpClient sock = ar.AsyncState as UdpClient;
@@ -60,7 +66,7 @@ namespace TelloDCP3_0
             frmCli.lbComm.Items.Add(source.ToString() + ": " + receiveString);
             sock.BeginReceive(new AsyncCallback(ReceiveCallback), sock);
         }
-        public void udpcommand(string msg)
+        public void udpcommand(string msg, int tout)
         {
             udpCli.BeginReceive(new AsyncCallback(ReceiveCallback), udpCli);
 
@@ -72,16 +78,16 @@ namespace TelloDCP3_0
         }
         private void btnSend_Click(object sender, EventArgs e)
         {
-            udpcommand(cbCommand.Text);
+            udpcommand(cbCommand.Text,50);
         }
 
         private void btnTakeoff_Click(object sender, EventArgs e)
         {
-            udpcommand("takeoff");
+            udpcommand("takeoff",50);
         }
         private void btnLand_Click(object sender, EventArgs e)
         {
-            udpcommand("land");
+            udpcommand("land",50);
         }
         private void FrmDCP_Load(object sender, EventArgs e)
         {
@@ -225,6 +231,46 @@ namespace TelloDCP3_0
             }
         }
 
+        private void brnUp_Click(object sender, EventArgs e)
+        {
+            udpcommand("up 30", 50);
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            udpcommand("down 30", 50);
+        }
+        
+        private void btnYawmi_Click(object sender, EventArgs e)
+        {
+            udpcommand("cw 90", 50);
+        }
+
+        private void btnYawplus_Click(object sender, EventArgs e)
+        {
+            udpcommand("cw 270", 50);
+        }
+
+        private void btnUparrow_Click(object sender, EventArgs e)
+        {
+            udpcommand("forward 150", 50);
+        }
+
+        private void btnLeftarrow_Click(object sender, EventArgs e)
+        {
+            udpcommand("left 30", 50);
+        }
+
+        private void btnRightarrow_Click(object sender, EventArgs e)
+        {
+            udpcommand("right 30", 50);
+        }
+
+        private void btnDownarrow_Click(object sender, EventArgs e)
+        {
+            udpcommand("backward 150", 50);
+        }
+
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sd = new SaveFileDialog();
@@ -234,5 +280,6 @@ namespace TelloDCP3_0
             if (sd.FileName != "")
                 File.WriteAllText(sd.FileName, tbEdit.Text);
         }
+
     }
 }

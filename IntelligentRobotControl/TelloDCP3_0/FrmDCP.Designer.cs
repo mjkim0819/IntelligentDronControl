@@ -33,7 +33,15 @@ namespace TelloDCP3_0
             this.cbCommand = new System.Windows.Forms.ComboBox();
             this.btnCam = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbHead = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbAlt = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbBatt = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbLog = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnStop = new System.Windows.Forms.Button();
@@ -49,6 +57,7 @@ namespace TelloDCP3_0
             this.btnLand = new System.Windows.Forms.Button();
             this.btnTakeoff = new System.Windows.Forms.Button();
             this.lbComm = new System.Windows.Forms.ListBox();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             this.lbStatus = new System.Windows.Forms.ListBox();
             this.lbCode = new System.Windows.Forms.ListBox();
             this.tbEdit = new System.Windows.Forms.TextBox();
@@ -65,15 +74,6 @@ namespace TelloDCP3_0
             this.autoRunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cbLog = new System.Windows.Forms.CheckBox();
-            this.cbStatus = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbHead = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lbAlt = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbBatt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -135,6 +135,83 @@ namespace TelloDCP3_0
             this.panel2.Size = new System.Drawing.Size(802, 30);
             this.panel2.TabIndex = 27;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label2.Location = new System.Drawing.Point(395, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label2.Size = new System.Drawing.Size(31, 25);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "deg";
+            // 
+            // lbHead
+            // 
+            this.lbHead.AutoSize = true;
+            this.lbHead.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbHead.Location = new System.Drawing.Point(426, 0);
+            this.lbHead.Name = "lbHead";
+            this.lbHead.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbHead.Size = new System.Drawing.Size(23, 25);
+            this.lbHead.TabIndex = 39;
+            this.lbHead.Text = "??";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label5.Location = new System.Drawing.Point(449, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label5.Size = new System.Drawing.Size(94, 25);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "cm Heading: ";
+            // 
+            // lbAlt
+            // 
+            this.lbAlt.AutoSize = true;
+            this.lbAlt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbAlt.Location = new System.Drawing.Point(543, 0);
+            this.lbAlt.Name = "lbAlt";
+            this.lbAlt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbAlt.Size = new System.Drawing.Size(23, 25);
+            this.lbAlt.TabIndex = 37;
+            this.lbAlt.Text = "??";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Location = new System.Drawing.Point(566, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label3.Size = new System.Drawing.Size(75, 25);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "% Altitude:";
+            // 
+            // lbBatt
+            // 
+            this.lbBatt.AutoSize = true;
+            this.lbBatt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbBatt.Location = new System.Drawing.Point(641, 0);
+            this.lbBatt.Name = "lbBatt";
+            this.lbBatt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lbBatt.Size = new System.Drawing.Size(23, 25);
+            this.lbBatt.TabIndex = 35;
+            this.lbBatt.Text = "??";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label1.Location = new System.Drawing.Point(664, 0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.label1.Size = new System.Drawing.Size(43, 25);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Batt: ";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.cbLog);
@@ -149,6 +226,18 @@ namespace TelloDCP3_0
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(802, 423);
             this.panel4.TabIndex = 29;
+            // 
+            // cbLog
+            // 
+            this.cbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLog.AutoSize = true;
+            this.cbLog.Location = new System.Drawing.Point(743, 5);
+            this.cbLog.Name = "cbLog";
+            this.cbLog.Size = new System.Drawing.Size(54, 19);
+            this.cbLog.TabIndex = 30;
+            this.cbLog.Text = "Log";
+            this.cbLog.UseVisualStyleBackColor = true;
+            this.cbLog.CheckedChanged += new System.EventHandler(this.cbLog_CheckedChanged);
             // 
             // panel1
             // 
@@ -210,6 +299,7 @@ namespace TelloDCP3_0
             this.btnDownarrow.TabIndex = 13;
             this.btnDownarrow.Text = "↓";
             this.btnDownarrow.UseVisualStyleBackColor = true;
+            this.btnDownarrow.Click += new System.EventHandler(this.btnDownarrow_Click);
             // 
             // btnLeftarrow
             // 
@@ -219,6 +309,7 @@ namespace TelloDCP3_0
             this.btnLeftarrow.TabIndex = 12;
             this.btnLeftarrow.Text = "←";
             this.btnLeftarrow.UseVisualStyleBackColor = true;
+            this.btnLeftarrow.Click += new System.EventHandler(this.btnLeftarrow_Click);
             // 
             // btnRightarrow
             // 
@@ -228,6 +319,7 @@ namespace TelloDCP3_0
             this.btnRightarrow.TabIndex = 11;
             this.btnRightarrow.Text = "→";
             this.btnRightarrow.UseVisualStyleBackColor = true;
+            this.btnRightarrow.Click += new System.EventHandler(this.btnRightarrow_Click);
             // 
             // btnUparrow
             // 
@@ -237,6 +329,7 @@ namespace TelloDCP3_0
             this.btnUparrow.TabIndex = 10;
             this.btnUparrow.Text = "↑";
             this.btnUparrow.UseVisualStyleBackColor = true;
+            this.btnUparrow.Click += new System.EventHandler(this.btnUparrow_Click);
             // 
             // btnDown
             // 
@@ -246,6 +339,7 @@ namespace TelloDCP3_0
             this.btnDown.TabIndex = 9;
             this.btnDown.Text = "down";
             this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
             // 
             // btnYawmi
             // 
@@ -255,6 +349,7 @@ namespace TelloDCP3_0
             this.btnYawmi.TabIndex = 8;
             this.btnYawmi.Text = "yaw -";
             this.btnYawmi.UseVisualStyleBackColor = true;
+            this.btnYawmi.Click += new System.EventHandler(this.btnYawmi_Click);
             // 
             // btnYawplus
             // 
@@ -264,6 +359,7 @@ namespace TelloDCP3_0
             this.btnYawplus.TabIndex = 7;
             this.btnYawplus.Text = "yaw +";
             this.btnYawplus.UseVisualStyleBackColor = true;
+            this.btnYawplus.Click += new System.EventHandler(this.btnYawplus_Click);
             // 
             // brnUp
             // 
@@ -273,6 +369,7 @@ namespace TelloDCP3_0
             this.brnUp.TabIndex = 6;
             this.brnUp.Text = "up";
             this.brnUp.UseVisualStyleBackColor = true;
+            this.brnUp.Click += new System.EventHandler(this.brnUp_Click);
             // 
             // btnLand
             // 
@@ -303,6 +400,19 @@ namespace TelloDCP3_0
             this.lbComm.Name = "lbComm";
             this.lbComm.Size = new System.Drawing.Size(283, 173);
             this.lbComm.TabIndex = 22;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Checked = true;
+            this.cbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbStatus.Location = new System.Drawing.Point(665, 5);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(71, 19);
+            this.cbStatus.TabIndex = 29;
+            this.cbStatus.Text = "pState";
+            this.cbStatus.UseVisualStyleBackColor = true;
             // 
             // lbStatus
             // 
@@ -441,108 +551,6 @@ namespace TelloDCP3_0
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.aboutToolStripMenuItem.Text = "About Dcp";
-            // 
-            // cbLog
-            // 
-            this.cbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbLog.AutoSize = true;
-            this.cbLog.Location = new System.Drawing.Point(743, 5);
-            this.cbLog.Name = "cbLog";
-            this.cbLog.Size = new System.Drawing.Size(54, 19);
-            this.cbLog.TabIndex = 30;
-            this.cbLog.Text = "Log";
-            this.cbLog.UseVisualStyleBackColor = true;
-            this.cbLog.CheckedChanged += new System.EventHandler(this.cbLog_CheckedChanged);
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbStatus.AutoSize = true;
-            this.cbStatus.Checked = true;
-            this.cbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbStatus.Location = new System.Drawing.Point(665, 5);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(71, 19);
-            this.cbStatus.TabIndex = 29;
-            this.cbStatus.Text = "pState";
-            this.cbStatus.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Location = new System.Drawing.Point(395, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label2.Size = new System.Drawing.Size(31, 25);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "deg";
-            // 
-            // lbHead
-            // 
-            this.lbHead.AutoSize = true;
-            this.lbHead.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbHead.Location = new System.Drawing.Point(426, 0);
-            this.lbHead.Name = "lbHead";
-            this.lbHead.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbHead.Size = new System.Drawing.Size(23, 25);
-            this.lbHead.TabIndex = 39;
-            this.lbHead.Text = "??";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label5.Location = new System.Drawing.Point(449, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label5.Size = new System.Drawing.Size(94, 25);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "cm Heading: ";
-            // 
-            // lbAlt
-            // 
-            this.lbAlt.AutoSize = true;
-            this.lbAlt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbAlt.Location = new System.Drawing.Point(543, 0);
-            this.lbAlt.Name = "lbAlt";
-            this.lbAlt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbAlt.Size = new System.Drawing.Size(23, 25);
-            this.lbAlt.TabIndex = 37;
-            this.lbAlt.Text = "??";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label3.Location = new System.Drawing.Point(566, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label3.Size = new System.Drawing.Size(75, 25);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "% Altitude:";
-            // 
-            // lbBatt
-            // 
-            this.lbBatt.AutoSize = true;
-            this.lbBatt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbBatt.Location = new System.Drawing.Point(641, 0);
-            this.lbBatt.Name = "lbBatt";
-            this.lbBatt.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lbBatt.Size = new System.Drawing.Size(23, 25);
-            this.lbBatt.TabIndex = 35;
-            this.lbBatt.Text = "??";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Location = new System.Drawing.Point(664, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label1.Size = new System.Drawing.Size(43, 25);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Batt: ";
             // 
             // FrmDCP
             // 
