@@ -51,7 +51,7 @@ namespace TelloDCP3_0
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
-            pWin.udpcommand("streamon,10");
+            pWin.udpcommand("streamom", 10);
             tCam = new Thread(new ThreadStart(CamCallback));
             tCam.Start();
             tStarted = true;
@@ -62,7 +62,7 @@ namespace TelloDCP3_0
         private void btnStop_Click(object sender, EventArgs e)
         {
             tStarted = false;
-            pWin.udpcommand("streamoff,10");
+            pWin.udpcommand("streamoff", 10);
             try
             {
                 udpSvr.Close();
