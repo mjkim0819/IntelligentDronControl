@@ -91,6 +91,7 @@ namespace TelloDCP3_0
             this.Controls.Add(this.lbData);
             this.Name = "FrmCam";
             this.Text = "FrmCam";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCam_FormClosing);
             this.Load += new System.EventHandler(this.FrmCam_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

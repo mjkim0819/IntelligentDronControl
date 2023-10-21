@@ -26,9 +26,10 @@ namespace TelloDCP3_0
             pWin = par;
             udpSvr = new UdpClient(11111);
         }
-        private void FrmDCP_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmCam_FormClosing(object sender, FormClosingEventArgs e)
         {
-            btnStop.PerformClick();
+            if (btnStart.Enabled == false)
+                btnStop.PerformClick();
             if (udpSvr != null)
                 udpSvr.Close();
         }

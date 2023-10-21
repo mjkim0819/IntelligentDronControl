@@ -54,6 +54,7 @@ namespace TelloDCP3_0
             lbStatus.Items.Add("Sever disconnected.");
             udpSvr.Close();
         }
+
         private void dataProc90(string pStr)
         {
             long dt = DateTime.Now.Ticks;
@@ -81,11 +82,6 @@ namespace TelloDCP3_0
             lbBatt.Text = dd[10].Substring(4);
         }
 
-        internal void udpcommand(string v)
-        {
-            throw new NotImplementedException();
-        }
-
         public static void ReceiveCallback(IAsyncResult ar)
         {
             UdpClient sock = ar.AsyncState as UdpClient;
@@ -102,9 +98,6 @@ namespace TelloDCP3_0
 
             IPEndPoint target = new IPEndPoint(IPAddress.Parse("192.168.10.1"), 8889);
             Byte[] senddata = Encoding.ASCII.GetBytes(msg);
-
-            frmCli.lbComm.Items.Add(">>" + msg);
-            udpCli.Send(senddata, senddata.Length, target);
         }
         private void btnSend_Click(object sender, EventArgs e)
         {
