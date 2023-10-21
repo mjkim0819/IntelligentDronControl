@@ -26,6 +26,8 @@ namespace TelloDCP3_0
         private bool abortRun;
         public long T_time;
         StreamWriter swLog;
+        public bool cmdDone = true;
+
 
         public FrmDCP()
         {
@@ -45,10 +47,38 @@ namespace TelloDCP3_0
                 string status = BitConverter.ToString(rb);
                 string rd = Encoding.ASCII.GetString(rb);
 
-                lbStatus.Items.Add(ep.ToString() + ": " + rd);
+                if (cbStatus.Checked)
+                    lbStatus.Items.Add(ep.ToString() + ": " + rd);
+                dataProc90(rd);
             }
             lbStatus.Items.Add("Sever disconnected.");
             udpSvr.Close();
+        }
+        private void dataProc90(string pStr)
+        {
+            long dt = DateTime.Now.Ticks;
+
+            if (pStr[0] != 'p')
+                return;
+
+            //"pitch:%d;roll:%d;yaw:%d;vgx:%d;vgy:%d;vgz:%d;templ:%d;temph:%d;tof:%d;
+            //h:%d;bat:%d;baro:%.2f;time:%d;agx:%.2f;agy:%.2f;agz:%.2f;\r\n"
+
+            string[] dd = pStr.Split(';');
+            long mtime = (DateTime.Now.Ticks - T_time) / TimeSpan.TicksPerMillisecond;
+            string msg = mtime + ", ";
+
+            msg += dd[10].Substring(4) + ", ";
+            msg += dd[2].Substring(4) + ", ";
+            msg += dd[9].Substring(2) + ", ";
+            msg += dd[8].Substring(4) + ", ";
+            msg += dd[11].Substring(5);
+            if (cbLog.Checked && swLog != null)
+                swLog.WriteLine(msg);
+
+            lbHead.Text = dd[2].Substring(4);
+            lbAlt.Text = dd[9].Substring(2);
+            lbBatt.Text = dd[10].Substring(4);
         }
 
         internal void udpcommand(string v)
