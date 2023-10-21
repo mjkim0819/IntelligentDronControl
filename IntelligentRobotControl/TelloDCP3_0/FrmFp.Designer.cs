@@ -128,17 +128,16 @@ namespace TelloDCP3_0
             // 
             // pbRoom
             // 
-            this.pbRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbRoom.BackColor = System.Drawing.Color.White;
             this.pbRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbRoom.BackgroundImage")));
             this.pbRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbRoom.Location = new System.Drawing.Point(1, 0);
-            this.pbRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.pbRoom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbRoom.Location = new System.Drawing.Point(0, 0);
             this.pbRoom.Name = "pbRoom";
             this.pbRoom.Size = new System.Drawing.Size(270, 453);
             this.pbRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbRoom.TabIndex = 10;
             this.pbRoom.TabStop = false;
+            this.pbRoom.SizeChanged += new System.EventHandler(this.pbRoom_SizeChanged);
             this.pbRoom.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pbRoom_MouseClick);
             // 
             // pbDrone

@@ -19,12 +19,6 @@ namespace TelloDCP3_0
             InitializeComponent();
             pWin = parent;
         }
-        private void Frm_Load(object sender, EventArgs e)
-        {
-            rRatio = (double)pbRoom.BackgroundImage.Width / pbRoom.BackgroundImage.Height;
-            pbRoom.Controls.Add(pbDrone);
-            drawGrid();
-        }
         public struct WPoint
         {
             public Point p;
@@ -33,6 +27,12 @@ namespace TelloDCP3_0
         WPoint[] mPoint = new WPoint[50];
         int wIndex = -1;
         double rRatio = 1;
+        private void Frm_Load(object sender, EventArgs e)
+        {
+            rRatio = (double)pbRoom.BackgroundImage.Width / pbRoom.BackgroundImage.Height;
+            pbRoom.Controls.Add(pbDrone);
+            drawGrid();
+        }
         private void drawGrid()
         {
             int x, y;
@@ -180,7 +180,16 @@ namespace TelloDCP3_0
 
             drawPath(wIndex);
         }
+        private void pbRoom_SizeChanged(object sender, EventArgs e)
+        {
+            int w, h;
 
+            h = Math.Max(pbRoom.Height, pbDrone.Width);
+            w = (int)(h * rRatio);
+
+            pbRoom.Width = w;
+            pbRoom.Height = h;
+        }
         private void btnCoding_Click(object sender, EventArgs e)
         {
             int alt = 80, deg = 0;
