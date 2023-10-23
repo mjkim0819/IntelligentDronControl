@@ -101,7 +101,7 @@ namespace TelloDCP3_0
         }
         private void btnSend_Click(object sender, EventArgs e)
         {
-            udpcommand(cbCommand.Text,50);
+            udpcommand(cbCommand.Text, 50);
         }
 
         private void btnTakeoff_Click(object sender, EventArgs e)
