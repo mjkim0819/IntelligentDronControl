@@ -51,7 +51,7 @@ namespace TelloDCP3_0
                     lbStatus.Items.Add(ep.ToString() + ": " + rd);
                 dataProc90(rd);
             }
-            lbStatus.Items.Add("Sever disconnected.");
+            lbStatus.Items.Add("Server disconnected.");
             udpSvr.Close();
         }
 

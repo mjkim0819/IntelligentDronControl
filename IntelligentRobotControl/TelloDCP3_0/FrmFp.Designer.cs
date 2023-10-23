@@ -164,6 +164,7 @@ namespace TelloDCP3_0
             this.Name = "FrmFp";
             this.Text = "Flight Plan";
             this.Load += new System.EventHandler(this.Frm_Load);
+            this.ResizeEnd += new System.EventHandler(this.FrmFp_ResizeEnd);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbGrid)).EndInit();

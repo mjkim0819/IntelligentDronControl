@@ -222,6 +222,12 @@ namespace TelloDCP3_0
             }
             pWin.tbEdit.AppendText(pWin.mCmd[1] + "\r\n");
         }
+        private void FrmFp_ResizeEnd(object sender, EventArgs e)
+        {
+            int t_off = SystemInformation.CaptionHeight + 22;
+            this.Height = pbRoom.Height + t_off;
+            this.Width = pbRoom.Width + panel1.Width + 25;
+        }
 
     }
 }
