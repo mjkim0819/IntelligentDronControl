@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelloDCP2_0", "TelloDCP2_0\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelloDCP3_0", "TelloDCP3_0\TelloDCP3_0.csproj", "{4DDBD04B-0A3E-49D5-9905-6C9D0B8C825B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelloDCP4_0", "TelloDCP4_0\TelloDCP4_0.csproj", "{0FDE4D80-F3AB-4732-9EAE-ABA2EA10492C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4DDBD04B-0A3E-49D5-9905-6C9D0B8C825B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDBD04B-0A3E-49D5-9905-6C9D0B8C825B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDBD04B-0A3E-49D5-9905-6C9D0B8C825B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FDE4D80-F3AB-4732-9EAE-ABA2EA10492C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDE4D80-F3AB-4732-9EAE-ABA2EA10492C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDE4D80-F3AB-4732-9EAE-ABA2EA10492C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDE4D80-F3AB-4732-9EAE-ABA2EA10492C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
