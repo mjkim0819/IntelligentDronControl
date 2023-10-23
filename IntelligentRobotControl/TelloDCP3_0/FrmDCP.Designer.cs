@@ -571,6 +571,8 @@ namespace TelloDCP3_0
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDCP_FormClosing);
+
 
         }
 
