@@ -71,14 +71,14 @@ namespace TelloDCP3_0
             {
                 p = trimPoint(mPoint[i].p);
                 tbAlt.Value = mPoint[i].Alt;
-                myPen.Width = 5;
+                myPen.Width = 10; // point weight
                 gr.DrawEllipse(myPen, p.X - rr / 2, p.Y - rr / 2, rr, rr);
-                gr.DrawString(tbAlt.Value.ToString(), new Font("Arial", 10),
+                gr.DrawString(tbAlt.Value.ToString(), new Font("Arial", 50), // string weight
                     new SolidBrush(Color.Red), p.X, p.Y - 20);
-                myPen.Width = 1;
+                myPen.Width = 10;
                 if (i > 0)
                 {
-                    //  p = trimPoint(mPoint[i].p);
+                    // p = trimPoint(mPoint[i].p);
                     _p = trimPoint(mPoint[i - 1].p);
                     gr.DrawLine(myPen, p, _p);
                     x = p.X - _p.X;
