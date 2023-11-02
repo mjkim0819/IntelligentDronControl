@@ -291,7 +291,7 @@ namespace TelloDCP4_0
 
         private void btnDownarrow_Click(object sender, EventArgs e)
         {
-            udpcommand("backward 150", 50);
+            udpcommand("back 150", 50);
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
