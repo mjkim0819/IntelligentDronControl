@@ -1,9 +1,11 @@
 ﻿using Emgu.CV;
+using Emgu.CV.CvEnum;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -42,13 +44,15 @@ namespace TelloDCP4_0
         private void CamCallback()
         {
             IPEndPoint RemoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
+            //vCap = new VideoCapture("udp://@0.0.0.0:11111");
             vCap = new VideoCapture(0);
             Mat frame = new Mat();
+
             while (tStarted)
             {
                 Byte[] buf;
                 frame = vCap.QueryFrame();
-                // if (frame != null)
+               // if (frame != null)
                 pbTcam.Image = frame.ToBitmap();
             }
         }
@@ -68,7 +72,7 @@ namespace TelloDCP4_0
             pWin.udpcommand("streamoff", 10);
             try
             {
-                udpSvr.Close();
+                //udpSvr.Close();
                 tCam.Abort();
             }
             catch (Exception ex) { };
