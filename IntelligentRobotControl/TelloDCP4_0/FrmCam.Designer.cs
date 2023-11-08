@@ -29,11 +29,13 @@ namespace TelloDCP4_0
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCam));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
-            this.lbData = new System.Windows.Forms.ListBox();
+            this.pbTcam = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTcam)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -41,10 +43,10 @@ namespace TelloDCP4_0
             this.panel1.Controls.Add(this.btnStart);
             this.panel1.Controls.Add(this.btnStop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 373);
+            this.panel1.Location = new System.Drawing.Point(0, 338);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(682, 30);
+            this.panel1.Size = new System.Drawing.Size(444, 30);
             this.panel1.TabIndex = 3;
             // 
             // btnStart
@@ -62,7 +64,7 @@ namespace TelloDCP4_0
             // btnStop
             // 
             this.btnStop.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnStop.Location = new System.Drawing.Point(607, 0);
+            this.btnStop.Location = new System.Drawing.Point(369, 0);
             this.btnStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 30);
@@ -71,29 +73,31 @@ namespace TelloDCP4_0
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // lbData
+            // pbTcam
             // 
-            this.lbData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbData.FormattingEnabled = true;
-            this.lbData.ItemHeight = 15;
-            this.lbData.Location = new System.Drawing.Point(0, 0);
-            this.lbData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(682, 403);
-            this.lbData.TabIndex = 2;
+            this.pbTcam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTcam.Image = ((System.Drawing.Image)(resources.GetObject("pbTcam.Image")));
+            this.pbTcam.Location = new System.Drawing.Point(0, 0);
+            this.pbTcam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbTcam.Name = "pbTcam";
+            this.pbTcam.Size = new System.Drawing.Size(444, 338);
+            this.pbTcam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTcam.TabIndex = 4;
+            this.pbTcam.TabStop = false;
             // 
             // FrmCam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 403);
+            this.ClientSize = new System.Drawing.Size(444, 368);
+            this.Controls.Add(this.pbTcam);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lbData);
             this.Name = "FrmCam";
             this.Text = "FrmCam";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCam_FormClosing);
             this.Load += new System.EventHandler(this.FrmCam_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTcam)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,6 +107,6 @@ namespace TelloDCP4_0
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.ListBox lbData;
+        private System.Windows.Forms.PictureBox pbTcam;
     }
 }

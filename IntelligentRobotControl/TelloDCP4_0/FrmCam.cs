@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Emgu.CV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,7 @@ namespace TelloDCP4_0
         static FrmCam tWin;
         Thread tCam;
         bool tStarted = false;
+        VideoCapture vCap;
         public FrmCam(FrmDCP par)
         {
             InitializeComponent();
@@ -40,13 +42,14 @@ namespace TelloDCP4_0
         private void CamCallback()
         {
             IPEndPoint RemoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
-
+            vCap = new VideoCapture(0);
+            Mat frame = new Mat();
             while (tStarted)
             {
                 Byte[] buf;
-                buf = udpSvr.Receive(ref RemoteEndPoint);
-                lbData.Items.Add(buf.Length.ToString() + ": " + BitConverter.ToString(buf));
-                //video_decode(buf);
+                frame = vCap.QueryFrame();
+                // if (frame != null)
+                pbTcam.Image = frame.ToBitmap();
             }
         }
         private void btnStart_Click(object sender, EventArgs e)
